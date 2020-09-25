@@ -39,7 +39,7 @@ export default function Home() {
       </Head>
 
       <main>
-        <iframe src="https://sandbox.awz-virtual.de/" title="3D Virtual Tour" className="iframe_virtualTour" frameBorder="0" allowFullScreen={true} allow="cross-origin; fullscreen; accelerometer; gyroscope; magnetometer; vr; camera; microphone"></iframe>
+        <iframe src="https://sandbox.awz-virtual.de/" title="3D Virtual Tour" style="position: relative; width: 100%; height: 100%;" frameBorder="0" allowFullScreen={true} allow="cross-origin; fullscreen; accelerometer; gyroscope; magnetometer; vr; camera; microphone"></iframe>
         <h1 className="title">
           Learn <a href="https://nextjs.org">Next.js!</a>
         </h1>
