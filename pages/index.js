@@ -1,14 +1,45 @@
 import Head from 'next/head'
 
 export default function Home() {
+  const definitions = require('../definitions/exported_definitions');
+
+  console.log('definitions_ ', definitions);
+
   return (
     <div className="container">
       <Head>
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
+        <style>
+          .iframe_virtualTour {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.headerOverlay {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 8rem;
+  background: whitesmoke;
+  z-index: 1000;
+  animation-name: initialOverlayOut;
+  animation-duration: 450ms;
+  animation-delay: 3s;
+  animation-fill-mode: forwards;
+  cursor: pointer;
+}
+
+@keyframes initialOverlayOut {
+  0% {top: 0}
+  100% {top: -7rem}
+}
+        </style>
       </Head>
 
       <main>
+        <iframe src="https://sandbox.awz-virtual.de/" title="3D Virtual Tour" className="iframe_virtualTour" frameBorder="0" allowFullScreen={true} allow="cross-origin; fullscreen; accelerometer; gyroscope; magnetometer; vr; camera; microphone"></iframe>
         <h1 className="title">
           Learn <a href="https://nextjs.org">Next.js!</a>
         </h1>
