@@ -1,4 +1,8 @@
-export default definitions: [
+const trans = (inp) => inp;
+const regTextVar = (inp) => inp;
+const definitions = () => {
+    return [
+
       {
         id: "video_90620B5D_EABE_8C03_41E4_185AF50CA793",
         height: 720,
@@ -17937,4 +17941,7 @@ export default definitions: [
         mapColor: "any",
         class: "HotspotPanoramaOverlayArea",
       },
-    ]
+    ];
+};
+
+exports.definitions = definitions;
